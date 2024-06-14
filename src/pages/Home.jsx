@@ -11,6 +11,13 @@ import { BackgroundBeams } from "../components/BeamBackground";
 import { SparklesPreview } from "../components/SparklesText";
 import { StickyScroll } from "../components/StickyScrollEffect";
 import { ExperienceText } from "../components/ExperienceText";
+import { ProjectsText } from "../components/ProjectsText";
+import { BackgroundGradientDemo1 } from "../components/ProjectCards/Card1";
+import { BackgroundGradientDemo2 } from "../components/ProjectCards/Card2";
+import { BackgroundGradientDemo3 } from "../components/ProjectCards/Card3";
+import { BackgroundGradientDemo4 } from "../components/ProjectCards/Card4";
+import { BackgroundGradientDemo5 } from "../components/ProjectCards/Card5";
+import { BackgroundGradientDemo6 } from "../components/ProjectCards/Card6";
 
 const CanvasRevealEffectDemo2 = () => {
   return (
@@ -195,6 +202,29 @@ const Home = () => {
       <GridBackgroundDemo />
       <ExperienceText />
       <StickyScroll />
+      <ProjectsText />
+      <div className="flex flex-col lg:flex-row lg:space-x-36 p-5">
+        <div style={{ marginTop: "40px" }}>
+          <BackgroundGradientDemo1 />
+        </div>
+        <div style={{ marginTop: "40px" }}>
+          <BackgroundGradientDemo2 />
+        </div>
+        <div style={{ marginTop: "40px" }}>
+          <BackgroundGradientDemo3 />
+        </div>
+      </div>
+      <div className="flex flex-col lg:flex-row lg:space-x-36 p-5">
+        <div style={{ marginTop: "40px" }}>
+          <BackgroundGradientDemo4 />
+        </div>
+        <div style={{ marginTop: "40px" }}>
+          <BackgroundGradientDemo5 />
+        </div>
+        <div style={{ marginTop: "40px" }}>
+          <BackgroundGradientDemo6 />
+        </div>
+      </div>
       <BackgroundBeams />
     </>
   );
