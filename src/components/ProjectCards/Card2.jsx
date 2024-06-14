@@ -15,7 +15,7 @@ export function BackgroundGradientDemo2() {
           className="object-contain"
         />
         <p className="text-base sm:text-xl text-black mt-4 mb-2 dark:text-neutral-200">
-          Medilinked
+          MediLinked
         </p>
         <p className="text-sm text-neutral-600 dark:text-neutral-400">
           Designed an innovative solution to promote circular economy principles

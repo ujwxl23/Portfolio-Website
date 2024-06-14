@@ -10,8 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@radix-ui/react-label": "^2.0.2",
     "@react-three/fiber": "^8.16.8",
     "@splinetool/react-spline": "^2.2.6",
+    "@tabler/icons-react": "^3.6.0",
     "@tsparticles/engine": "^3.4.0",
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.4.0",
@@ -22,6 +24,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.20.1",
+    "react-scroll": "^1.9.0",
     "react-top-loading-bar": "^2.3.1",
     "tailwind-merge": "^2.3.0",
     "tech-stack-icons": "^2.0.3",

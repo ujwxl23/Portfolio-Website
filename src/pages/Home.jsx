@@ -1,6 +1,5 @@
 import React from "react";
 import Navbar from "../components/Navbar";
-import { Canvas } from "@react-three/fiber";
 import { useEffect } from "react";
 import Spline from "@splinetool/react-spline";
 import wave from "../assets/wave.png";
@@ -18,6 +17,8 @@ import { BackgroundGradientDemo3 } from "../components/ProjectCards/Card3";
 import { BackgroundGradientDemo4 } from "../components/ProjectCards/Card4";
 import { BackgroundGradientDemo5 } from "../components/ProjectCards/Card5";
 import { BackgroundGradientDemo6 } from "../components/ProjectCards/Card6";
+import { ContactUsForm } from "../components/FormUI/ContactUsForm";
+import { ContactText } from "../components/ContactUsText";
 
 const CanvasRevealEffectDemo2 = () => {
   return (
@@ -125,6 +126,7 @@ const Home = () => {
       "Full-Stack Developer.",
       "Learner.",
       "Smart Contract Developer.",
+      "Blockchain Developer.",
     ];
     let wordIndex = 0;
     let charIndex = 0;
@@ -188,8 +190,11 @@ const Home = () => {
           <h1 className="text-4xl font-semibold text-white flex items-center ml-10 my-2">
             Hi!! <img src={wave} style={{ width: "40px" }} />
           </h1>
-          <h1 className="text-4xl font-semibold text-white flex items-center ml-10 mb-20">
-            My name is Ujwal Kumar.
+          <h1 className="text-4xl font-semibold text-white flex items-center ml-10">
+            This is Ujwal Kumar.
+          </h1>
+          <h1 className="text-2xl font-semibold text-white flex items-center ml-10 mb-20">
+            (Full-Stack Blockchain Developer)
           </h1>
           <Typewriter />
         </div>
@@ -197,33 +202,43 @@ const Home = () => {
           <Spline scene="https://prod.spline.design/rbVUVCB4iBjV7TjM/scene.splinecode" />
         </div>
       </div>
-      <CanvasRevealEffectDemo2 />
-      <SparklesPreview />
-      <GridBackgroundDemo />
-      <ExperienceText />
-      <StickyScroll />
-      <ProjectsText />
-      <div className="flex flex-col lg:flex-row lg:space-x-36 p-5">
-        <div style={{ marginTop: "40px" }}>
-          <BackgroundGradientDemo1 />
+      <div id="about">
+        <CanvasRevealEffectDemo2 />
+        <SparklesPreview />
+        <GridBackgroundDemo />
+      </div>
+      <div id="experience">
+        <ExperienceText />
+        <StickyScroll />
+      </div>
+      <div id="projects">
+        <ProjectsText />
+        <div className="flex flex-col lg:flex-row lg:space-x-36 p-5">
+          <div style={{ marginTop: "40px" }}>
+            <BackgroundGradientDemo1 />
+          </div>
+          <div style={{ marginTop: "40px" }}>
+            <BackgroundGradientDemo2 />
+          </div>
+          <div style={{ marginTop: "40px" }}>
+            <BackgroundGradientDemo3 />
+          </div>
         </div>
-        <div style={{ marginTop: "40px" }}>
-          <BackgroundGradientDemo2 />
-        </div>
-        <div style={{ marginTop: "40px" }}>
-          <BackgroundGradientDemo3 />
+        <div className="flex flex-col lg:flex-row lg:space-x-36 p-5">
+          <div style={{ marginTop: "40px" }}>
+            <BackgroundGradientDemo4 />
+          </div>
+          <div style={{ marginTop: "40px" }}>
+            <BackgroundGradientDemo5 />
+          </div>
+          <div style={{ marginTop: "40px" }}>
+            <BackgroundGradientDemo6 />
+          </div>
         </div>
       </div>
-      <div className="flex flex-col lg:flex-row lg:space-x-36 p-5">
-        <div style={{ marginTop: "40px" }}>
-          <BackgroundGradientDemo4 />
-        </div>
-        <div style={{ marginTop: "40px" }}>
-          <BackgroundGradientDemo5 />
-        </div>
-        <div style={{ marginTop: "40px" }}>
-          <BackgroundGradientDemo6 />
-        </div>
+      <div id="contact">
+        <ContactText />
+        <ContactUsForm />
       </div>
       <BackgroundBeams />
     </>

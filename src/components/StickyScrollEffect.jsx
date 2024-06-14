@@ -75,7 +75,7 @@ export const StickyScroll = () => {
           I was a Full stack Developer (Intern) from September 2023 to November
           2023 In this internship, I designed and implemented responsive
           frontend using React for 3 websites, enhancing user experience and
-          accessibility. I also created robust API using Node.js & Express.js
+          accessibility. Also created robust API using Node.js & Express.js
           ensuring seamless functionality & connectivity. Integrated MongoDB to
           optimize data storage, retrieval, and management. I collaborated with
           cross-functional teams ensuring feature integration that optimized
@@ -90,7 +90,7 @@ export const StickyScroll = () => {
         <p>
           I was a Blockchain Developer (Intern) from June 2023 to August 2023. I
           developed over 20 DeFi smart contracts using Hardhat for decentralized
-          systems and blockchain-based solutions. I also build and launched 4
+          systems and blockchain-based solutions. Also build and launched 4
           fully functional decentralized applications (Dapps) with seamless user
           experience in multiple networks like Ethereum, Polygon, Optimism,
           Binance. Integrated external API for enhancing blockchain

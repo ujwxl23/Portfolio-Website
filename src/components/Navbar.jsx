@@ -1,6 +1,6 @@
-import { Link, useLocation } from "react-router-dom";
-import { Links } from "../common/Links";
 import React, { useState } from "react";
+import { Link as ScrollLink } from "react-scroll";
+import { useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const location = useLocation();
@@ -9,6 +9,14 @@ const Navbar = () => {
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
   };
+
+  const links = [
+    { id: "home", name: "Home" },
+    { id: "about", name: "About" },
+    { id: "experience", name: "Experience" },
+    { id: "projects", name: "Projects" },
+    { id: "contact", name: "Contact" },
+  ];
 
   return (
     <>
@@ -44,33 +52,37 @@ const Navbar = () => {
               isMobileMenuOpen ? "hidden" : "block"
             }`}
           >
-            {Links.filter((link) => link.showInNavigation).map(
-              (link, index) => (
-                <Link
-                  key={index}
-                  to={link.path}
-                  className={`text-white ${
-                    location.pathname === link.path ? "font-bold" : ""
-                  }`}
-                >
-                  {link.name}
-                </Link>
-              )
-            )}
+            {links.map((link, index) => (
+              <ScrollLink
+                key={index}
+                to={link.id}
+                spy={true}
+                smooth={true}
+                duration={500}
+                className={`text-white ${
+                  location.pathname === link.id ? "font-bold" : ""
+                }`}
+              >
+                {link.name}
+              </ScrollLink>
+            ))}
           </div>
         </div>
         <div className={`lg:hidden ${isMobileMenuOpen ? "block" : "hidden"}`}>
-          {Links.filter((link) => link.showInNavigation).map((link, index) => (
-            <Link
+          {links.map((link, index) => (
+            <ScrollLink
               key={index}
-              to={link.path}
+              to={link.id}
+              spy={true}
+              smooth={true}
+              duration={500}
               className={`block text-white p-2 ${
-                location.pathname === link.path ? "font-bold" : ""
+                location.pathname === link.id ? "font-bold" : ""
               }`}
               onClick={() => setMobileMenuOpen(false)}
             >
               {link.name}
-            </Link>
+            </ScrollLink>
           ))}
         </div>
       </nav>
