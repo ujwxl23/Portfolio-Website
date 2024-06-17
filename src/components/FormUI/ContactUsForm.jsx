@@ -1,17 +1,58 @@
-import React from "react";
+import React, { useState } from "react";
 import { Label } from "./Label";
 import { Input } from "./Input";
 import { cn } from "../../assets/cn";
-import {
-  IconBrandGithub,
-  IconBrandGoogle,
-  IconBrandOnlyfans,
-} from "@tabler/icons-react";
+
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+import { getDatabase, ref, push, set, update } from "firebase/database";
 
 export function ContactUsForm() {
-  const handleSubmit = (e) => {
+  const firebaseConfig = {
+    apiKey: "AIzaSyDn49HFgB7lmCvrF1kwFDRIsKz9pGHLY5Y",
+    authDomain: "ujwalportfolio-24ecd.firebaseapp.com",
+    projectId: "ujwalportfolio-24ecd",
+    storageBucket: "ujwalportfolio-24ecd.appspot.com",
+    messagingSenderId: "1019464321676",
+    appId: "1:1019464321676:web:7e065c4b12ee8ef42ac9a9",
+    measurementId: "G-019C160P3N",
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  const db = getDatabase(app);
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    note: "",
+  });
+
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [id]: value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted");
+    try {
+      const newPostKey = push(ref(db, "contactFormSubmissions")).key;
+      const updates = {};
+      updates["/contactFormSubmissions/" + newPostKey] = formData;
+      await update(ref(db), updates);
+      console.log("Form submitted and saved to Realtime Database");
+      setFormData({
+        name: "",
+        email: "",
+        note: "",
+      });
+    } catch (error) {
+      console.error("Error saving form data to Realtime Database:", error);
+    }
   };
 
   return (
@@ -38,15 +79,33 @@ export function ContactUsForm() {
       <form className="my-8" onSubmit={handleSubmit}>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="firstname">Name</Label>
-          <Input id="firstname" placeholder="Tyler" type="text" />
+          <Input
+            id="name"
+            placeholder="Tyler"
+            type="text"
+            value={formData.name}
+            onChange={handleChange}
+          />
         </LabelInputContainer>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="email">Email Address</Label>
-          <Input id="email" placeholder="email@gmail.com" type="email" />
+          <Input
+            id="email"
+            placeholder="email@gmail.com"
+            type="email"
+            value={formData.email}
+            onChange={handleChange}
+          />
         </LabelInputContainer>
         <LabelInputContainer className="mb-4">
-          <Label htmlFor="password">Note</Label>
-          <Input id="password" placeholder="..." type="text" />
+          <Label htmlFor="note">Note</Label>
+          <Input
+            id="note"
+            placeholder="..."
+            type="text"
+            value={formData.note}
+            onChange={handleChange}
+          />
         </LabelInputContainer>
 
         <button

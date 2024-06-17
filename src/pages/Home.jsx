@@ -19,6 +19,7 @@ import { BackgroundGradientDemo5 } from "../components/ProjectCards/Card5";
 import { BackgroundGradientDemo6 } from "../components/ProjectCards/Card6";
 import { ContactUsForm } from "../components/FormUI/ContactUsForm";
 import { ContactText } from "../components/ContactUsText";
+import MintNFT from "./NFT";
 
 const CanvasRevealEffectDemo2 = () => {
   return (
@@ -240,6 +241,7 @@ const Home = () => {
         <ContactText />
         <ContactUsForm />
       </div>
+      <MintNFT />
       <BackgroundBeams />
     </>
   );
