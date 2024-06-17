@@ -25,7 +25,7 @@ const CanvasRevealEffectDemo2 = () => {
   return (
     <div className="py-20 flex flex-col lg:flex-row items-center justify-center bg-white dark:bg-black w-full gap-4 mx-auto px-8">
       <Card
-        title="I am a third-year student at VIT Vellore with a passion for developing innovative 
+        title="I am a final year student at VIT Vellore with a passion for developing innovative 
         projects using the latest technologies. I have a strong interest in web3 and AI, and I am eager 
         to work on projects that solve real-world problems and contribute to research in these fields."
         icon={<AceternityIcon />}
