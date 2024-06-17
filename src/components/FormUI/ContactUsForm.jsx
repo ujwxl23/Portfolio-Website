@@ -77,9 +77,16 @@ export function ContactUsForm() {
         Resume &rarr;
         <BottomGradient />
       </a>
-      <p className="font-bold text-xl text-neutral-200 text-center mt-2">
-        OR
-      </p>
+      <a
+        href="https://www.linkedin.com/in/ujwal-kumar-15bb7a21a/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bg-gradient-to-br relative group/btn  from-zinc-900 to-zinc-900  bg-zinc-800 w-full text-white rounded-md h-10 mt-3 font-medium shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset] text-center flex items-center justify-center"
+      >
+        LinkedIn &rarr;
+        <BottomGradient />
+      </a>
+      <p className="font-bold text-xl text-neutral-200 text-center mt-2">OR</p>
 
       <form className="my-8" onSubmit={handleSubmit}>
         <LabelInputContainer className="mb-4">
