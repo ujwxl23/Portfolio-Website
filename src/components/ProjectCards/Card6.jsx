@@ -5,7 +5,7 @@ import supply from "../../assets/supply-chain.png";
 export function BackgroundGradientDemo6() {
   return (
     <div>
-      <BackgroundGradient className="rounded-[22px] max-w-sm p-4 sm:p-10 bg-white dark:bg-zinc-900 ">
+      <BackgroundGradient className="rounded-[22px] max-w-sm p-4 sm:p-10 bg-zinc-900 ">
         <img
           src={supply}
           alt="jordans"
@@ -13,10 +13,10 @@ export function BackgroundGradientDemo6() {
           width="250"
           className="object-contain"
         />
-        <p className="text-base sm:text-xl text-black mt-4 mb-2 dark:text-neutral-200">
+        <p className="text-base sm:text-xl  mt-4 mb-2 text-neutral-200">
           TheGraphSuppyChain
         </p>
-        <p className="text-sm text-neutral-600 dark:text-neutral-400">
+        <p className="text-sm text-neutral-400">
           This application is a subgraph application created using TheGraph
           protocol for tracking of goods and suppy chain management deployed in
           Polygon_Mumbai testnet. It is used to track and record the
@@ -31,7 +31,7 @@ export function BackgroundGradientDemo6() {
           href="https://github.com/ujwxl23/TheGraphSupplyChain"
           target="_blank"
           rel="noopener noreferrer"
-          className="rounded-full pl-3 pr-1 py-1 text-white flex items-center space-x-1 bg-black mt-3 text-lg font-bold dark:bg-zinc-800"
+          className="rounded-full pl-3 pr-1 py-1 text-white flex items-center space-x-1  mt-3 text-lg font-bold bg-zinc-800"
         >
           <span>View in GitHub</span>
         </a>

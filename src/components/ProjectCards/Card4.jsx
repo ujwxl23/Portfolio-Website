@@ -5,7 +5,7 @@ import boy from "../../assets/boy.png";
 export function BackgroundGradientDemo4() {
   return (
     <div>
-      <BackgroundGradient className="rounded-[22px] max-w-sm p-4 sm:p-10 bg-white dark:bg-zinc-900 ">
+      <BackgroundGradient className="rounded-[22px] max-w-sm p-4 sm:p-10 bg-zinc-900 ">
         <img
           src={boy}
           alt="jordans"
@@ -13,10 +13,10 @@ export function BackgroundGradientDemo4() {
           width="250"
           className="object-contain"
         />
-        <p className="text-base sm:text-xl text-black mt-4 mb-2 dark:text-neutral-200">
+        <p className="text-base sm:text-xl  mt-4 mb-2 text-neutral-200">
           ProfileCreate DiD
         </p>
-        <p className="text-sm text-neutral-600 dark:text-neutral-400">
+        <p className="text-sm text-neutral-400">
           A decentralized profile creation application built using thirdweb on
           optimism-goreli testnet and using an information schema with Ethereum
           Attestation Service(EAS). Users are also able to add a profile photo
@@ -31,7 +31,7 @@ export function BackgroundGradientDemo4() {
           href="https://github.com/ujwxl23/EAS_Profile"
           target="_blank"
           rel="noopener noreferrer"
-          className="rounded-full pl-3 pr-1 py-1 text-white flex items-center space-x-1 bg-black mt-3 text-lg font-bold dark:bg-zinc-800"
+          className="rounded-full pl-3 pr-1 py-1 text-white flex items-center space-x-1  mt-3 text-lg font-bold bg-zinc-800"
         >
           <span>View in GitHub</span>
         </a>
