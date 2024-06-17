@@ -7,15 +7,18 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getDatabase, ref, push, set, update } from "firebase/database";
 
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 export function ContactUsForm() {
   const firebaseConfig = {
-    apiKey: "AIzaSyDn49HFgB7lmCvrF1kwFDRIsKz9pGHLY5Y",
-    authDomain: "ujwalportfolio-24ecd.firebaseapp.com",
-    projectId: "ujwalportfolio-24ecd",
-    storageBucket: "ujwalportfolio-24ecd.appspot.com",
-    messagingSenderId: "1019464321676",
-    appId: "1:1019464321676:web:7e065c4b12ee8ef42ac9a9",
-    measurementId: "G-019C160P3N",
+    apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+    authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+    projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+    storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+    appId: import.meta.env.VITE_FIREBASE_APP_ID,
+    measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
   };
 
   // Initialize Firebase
@@ -44,6 +47,7 @@ export function ContactUsForm() {
       const updates = {};
       updates["/contactFormSubmissions/" + newPostKey] = formData;
       await update(ref(db), updates);
+      toast.success("Form submitted");
       console.log("Form submitted and saved to Realtime Database");
       setFormData({
         name: "",
@@ -51,6 +55,7 @@ export function ContactUsForm() {
         note: "",
       });
     } catch (error) {
+      toast.error("Error saving form data to Realtime Database");
       console.error("Error saving form data to Realtime Database:", error);
     }
   };
@@ -118,6 +123,7 @@ export function ContactUsForm() {
 
         <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent my-8 h-[1px] w-full" />
       </form>
+      <ToastContainer />
     </div>
   );
 }
