@@ -1,4 +1,4 @@
-//Contract Address - 0x835189fa0e82a06549c030341949d2cec40b04fb;
+//Contract Address - 0x0fB83058616F1Cd079F1fd5c9ffA461d1F1D40c4;
 //Metadata.json IPFS CID- QmQMnAtgtxKKMtrcUpf36BiUMhCto8vPnNZu4HGUfxLW1U
 
 import React, { useState } from "react";
@@ -678,6 +678,12 @@ const MintNFT = () => {
     <div>
       <h2 className="text-4xl font-semibold text-white items-center text-center my-8">
         Get your Thank-You-NFT!!!!
+      </h2>
+      <h2 className="text-md  text-white items-center text-center mt-8">
+        1. Connect your metamask wallet.
+      </h2>
+      <h2 className="text-md text-white items-center text-center mb-8">
+        2. Click mint NFT button.
       </h2>
       <div className="button-container">
         <button

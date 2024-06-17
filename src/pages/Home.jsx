@@ -25,9 +25,9 @@ const CanvasRevealEffectDemo2 = () => {
   return (
     <div className="py-20 flex flex-col lg:flex-row items-center justify-center bg-white dark:bg-black w-full gap-4 mx-auto px-8">
       <Card
-        title="I am a 3rd year student in VIT Vellore. I love to build new trending
-          projects on the latest technologies. I am passionate about web3 and AI. Looking to work in building
-          real-world problem solving projects and research."
+        title="I am a third-year student at VIT Vellore with a passion for developing innovative 
+        projects using the latest technologies. I have a strong interest in web3 and AI, and I am eager 
+        to work on projects that solve real-world problems and contribute to research in these fields."
         icon={<AceternityIcon />}
       >
         <CanvasRevealEffect
@@ -81,6 +81,16 @@ const Card = ({ title, icon, children }) => {
           {title}
         </h2>
       </div>
+    </div>
+  );
+};
+
+const Footer = () => {
+  return (
+    <div className="bg-gray-200 text-center py-4">
+      <p className="text-gray-600 text-sm">
+        Made by Ujwal Kumar | © {new Date().getFullYear()}
+      </p>
     </div>
   );
 };
@@ -243,6 +253,7 @@ const Home = () => {
       </div>
       <MintNFT />
       <BackgroundBeams />
+      <Footer />
     </>
   );
 };
